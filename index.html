@@ -7,18 +7,32 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-slate-50">
 
 <!-- Navbar -->
-<nav class="bg-blue-600 text-white p-4 flex justify-between">
-  <h1 class="font-bold text-xl">Ishan13 Websites</h1>
-  <div class="space-x-4">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+<nav class="bg-indigo-600 text-white p-4">
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-xl">Ishan13 Websites</h1>
+    <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+    <div id="navLinks" class="hidden md:flex space-x-4">
+      <a href="index.html" class="hover:text-indigo-200">Home</a>
+      <a href="about.html" class="hover:text-indigo-200">About</a>
+      <a href="services.html" class="hover:text-indigo-200">Services</a>
+      <a href="contact.html" class="hover:text-indigo-200">Contact</a>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
+    <a href="index.html" class="block hover:text-indigo-200">Home</a>
+    <a href="about.html" class="block hover:text-indigo-200">About</a>
+    <a href="services.html" class="block hover:text-indigo-200">Services</a>
+    <a href="contact.html" class="block hover:text-indigo-200">Contact</a>
   </div>
 </nav>
+<script>
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  });
+</script>
 
 <!-- Hero -->
 <section class="text-center py-16 bg-white">
@@ -26,7 +40,7 @@
   <p class="text-gray-600 mt-2">Professional Website for Your Business</p>
 
   <div class="mt-6">
-    <a href="https://wa.me/918874458875" class="bg-green-500 text-white px-6 py-2 rounded">
+    <a href="https://wa.me/918874458875" class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded transition">
       WhatsApp Now
     </a>
   </div>
@@ -55,7 +69,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-blue-600 text-white text-center p-4">
+<footer class="bg-indigo-600 text-white text-center p-4">
   <p>© 2026 Ishan13 Websites</p>
 </footer>
 

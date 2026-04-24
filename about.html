@@ -2,28 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
 
-<nav class="bg-blue-600 text-white p-4 flex justify-between">
-  <h1>Ishan13 Websites</h1>
- <div class="space-x-4">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+<nav class="bg-indigo-600 text-white p-4">
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-xl">Ishan13 Websites</h1>
+    <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+    <div id="navLinks" class="hidden md:flex space-x-4">
+      <a href="index.html" class="hover:text-indigo-200">Home</a>
+      <a href="about.html" class="hover:text-indigo-200">About</a>
+      <a href="services.html" class="hover:text-indigo-200">Services</a>
+      <a href="contact.html" class="hover:text-indigo-200">Contact</a>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
+    <a href="index.html" class="block hover:text-indigo-200">Home</a>
+    <a href="about.html" class="block hover:text-indigo-200">About</a>
+    <a href="services.html" class="block hover:text-indigo-200">Services</a>
+    <a href="contact.html" class="block hover:text-indigo-200">Contact</a>
   </div>
 </nav>
 
-<section class="text-center py-16">
-  <h2 class="text-3xl font-bold">About Us</h2>
-  <p class="mt-4 max-w-xl mx-auto">
+<section class="text-center py-16 px-4 bg-slate-50 min-h-[60vh]">
+  <h2 class="text-3xl font-bold text-slate-800">About Us</h2>
+  <p class="mt-4 max-w-xl mx-auto text-slate-600 leading-relaxed">
     We help small businesses grow online by creating modern websites.
   </p>
 </section>
+
+<footer class="bg-indigo-600 text-white text-center p-4">
+  <p> 2026 Ishan13 Websites</p>
+</footer>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  });
+</script>
 
 </body>
 </html>
